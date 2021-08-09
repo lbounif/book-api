@@ -1,6 +1,7 @@
 //Creation of server in Nodejs
 //1. Import express
 const express = require("express")
+const cors = require("cors")
 require("./db/mongoose")
 const bookRouter = require("./routes/bookRouter")
 
@@ -9,6 +10,7 @@ const app = express()
 
 app.use(express.json())
 app.use(bookRouter)
+app.use(cors())
 
 //3. Define a port
 const port = process.env.PORT || 10010
