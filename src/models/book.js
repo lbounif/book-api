@@ -13,9 +13,8 @@ const bookSchema = new mongoose.Schema({
         trim: true //trim removes unnecessary spaces at the begining and the end
     },
     author: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'User'
+        type: String,
+        required: true
     },
     rating: {
         type: Number,
